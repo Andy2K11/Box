@@ -1,0 +1,1 @@
+cookbook 'misc', path: './cookbooks/misc'

@@ -1,0 +1,9 @@
+nodes/*.json
+.vagrant/
+.delivery/
+www/
+roles/
+scripts/
+data_bags/
+environments/
+
