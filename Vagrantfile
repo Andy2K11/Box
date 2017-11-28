@@ -7,7 +7,7 @@ end
 
 Vagrant.require_version ">=1.9.6"
 Vagrant.configure("2") do |config|
-    config.vm.define 'centos_apache' do |n|
+    config.vm.define 'apache' do |n|
         n.vm.box = "centos/7"
         n.vm.network "private_network", ip: "192.168.50.4"
         n.vm.synced_folder "C:/Virtual/Corductive", "/var/www/html", type: 'nfs'
@@ -25,12 +25,10 @@ Vagrant.configure("2") do |config|
             chef.nodes_path = "chef-dev-box/nodes"
             chef.add_recipe "misc::default"
             chef.add_recipe "apache::default"
-            # chef.synced_folder_type = "nfs"
         end
     end
 
-    config.vm.define 'centos_nodejs' do |n|
-        # n.omnibus.chef_version = :latest
+    config.vm.define 'nodejs' do |n|
         n.vm.box = "centos/7"
         n.vm.network "private_network", ip: "192.168.50.5"
         # n.vm.synced_folder "C:/Virtual/Code/html", "/var/www/html", type: 'nfs'
@@ -50,7 +48,5 @@ Vagrant.configure("2") do |config|
             chef.add_recipe "misc::default"
             chef.add_recipe "meanstack::default"
         end
-    end
-    config.vm.define 'centos' do |n|
     end
 end
