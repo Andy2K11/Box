@@ -4,7 +4,7 @@ cookbook_file '/etc/yum.repos.d/mongodb-org-3.4.repo' do
     owner 'root'
     group 'root'
     action :create_if_missing
-  end
+end
 
 package 'mongodb-org' do
     action :install

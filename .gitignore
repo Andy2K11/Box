@@ -7,3 +7,10 @@ scripts/
 data_bags/
 environments/
 
+*.crt
+*.key
+*.pem
+*.cert
+*.ppk
+*.pk*
+

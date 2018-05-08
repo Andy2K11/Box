@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
         n.vm.box = "centos/7"
         n.vm.network "private_network", ip: "192.168.50.5"
         # n.vm.synced_folder "C:/Virtual/Code/html", "/var/www/html", type: 'nfs'
-        n.vm.synced_folder "C:/Virtual/M101", "/var/www"
+        n.vm.synced_folder "C:/Virtual/N1", "/var/www"
         set_hostname(n)
 
         n.vm.provider "virtualbox" do |vb|
